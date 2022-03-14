@@ -264,8 +264,8 @@ nav li a {
   grid-column: 3/4;
   grid-row: 3/5;
   justify-self: start;
-  align-self: end;
   position: absolute;
+  top: 40vmin;
 }
 
 .third {
