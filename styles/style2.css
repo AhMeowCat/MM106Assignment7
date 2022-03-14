@@ -34,80 +34,42 @@ div[class^="background"] {
   overflow: hidden;
 }
 
-div[class^="background"]::after {
-  content: "";
-  background-size: cover;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
 .background1::after {
-  background: #6b98b9 url("../images/photos/springblossom.jpg") no-repeat center center;
+  background: #6b98b9 url("../images/photos/springblossom.jpg") repeat top center;
   opacity: 0.15;
+  background-size: cover;
+  z-index: -1;
 }
 
 .background2::after {
   background: url("../images/drawings/path.png") no-repeat center center, url("../images/drawings/river.png") no-repeat center center;
   opacity: 0.7;
+  background-size: 100%;
+  z-index: -2;
 }
 
+/* For "Thoughts" page later
 .background3::after {
   background: #6b98b9 url("../images/photos/heavenly.jpg") no-repeat center center;
   opacity: 0.4;
+  z-index: -1;
 }
 
 .background4::after {
   background: url("../images/drawings/river.png") no-repeat center center;
   opacity: 0.4;
   transform: scaleX(-1);
-}
+  z-index: -2;
+} */
 
-/* changed to this reference - https://reactgo.com/css-change-background-image-opacity/ */
-
-/*
-div[class^="background"] {
-  position: relative;
-  overflow: hidden;
-  border: 2px solid blue;
-}
-
-div[class^="background"]::before {
+div[class^="background"]::after {
   content: "";
-  position: absolute;
   top: 0;
+  left: 0;
   bottom: 0;
   right: 0;
-  left: 0;
-  z-index: -1;
-  border: 2px solid green;
+  position: absolute;  
 }
-
-.background1::before {
-  background: #6b98b9 url("../images/photos/springblossom.jpg") no-repeat top right;
-  opacity: 0.15;
-  background-size: cover;
-}
-
-.background2::before {
-  background: url("../images/drawings/path.png") no-repeat center center, url("../images/drawings/river.png") no-repeat center center;
-  opacity: 0.6;
-  background-size: 100%;
-}
-
-.background3::before {
-  background: #6b98b9 url("../images/photos/heavenly.jpg") no-repeat center center;
-  opacity: 0.4;
-}
-
-.background4::before {
-  background: url("../images/drawings/river.png") no-repeat center center;
-  opacity: 0.4;
-  transform: scaleX(-1);
-} */
 
 nav li:hover,
 #search:hover,
@@ -187,16 +149,19 @@ nav li a {
   /*2em */
 }
 
+
 .left.topbar {
   /* border: 3px solid pink; */
-  grid-column: 1/4;
+  grid-column: 1/6;
   grid-row: 2/3;
+  justify-self: start;
 }
 
 #sun {
   width: 28vmin;
   /*15em */
   float: left;
+  overflow: hidden;
 }
 
 .topbar h1 {
@@ -208,6 +173,7 @@ nav li a {
   text-align: right;
   letter-spacing: 7px;
   padding: 10px 75px;
+  overflow: hidden;
 }
 
 .topbar p {
@@ -219,6 +185,7 @@ nav li a {
   text-align: right;
   letter-spacing: 2px;
   padding-right: 75px;
+  overflow: hidden;
 }
 
 .topbar span {
